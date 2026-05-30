@@ -1,13 +1,13 @@
-# Taekyung Park Portfolio Homepage
+# Portfolio
 
-`dukgooenv.github.io`의 큰 틀을 참고해 `Taekyung Park` 포트폴리오 메뉴와 작품 분류를 재구성한 GitHub Pages용 정적 홈페이지입니다.
+포트폴리오 메뉴와 작품 분류를 재구성한 GitHub Pages용 정적 홈페이지입니다.
 
 ## 현재 메뉴 구성
 
 - `All portfolio`: 전체 작품
 - `About`: 소개, 언어, 경력, 연락처
-- `Professional`: Webzen Project N, Rootnstudio WHITEDAY2
-- `Personal`: 개인 작업 전체
+- `Professional`: 회사 작업
+- `Personal`: 개인 작업
 
 ## 수정할 곳
 
