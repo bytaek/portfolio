@@ -1,4 +1,4 @@
-# Portfolio Homepage
+# Taekyung Park Portfolio Homepage
 
 `dukgooenv.github.io`의 큰 틀을 참고해 `Taekyung Park` 포트폴리오 메뉴와 작품 분류를 재구성한 GitHub Pages용 정적 홈페이지입니다.
 
