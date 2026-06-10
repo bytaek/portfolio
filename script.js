@@ -5,12 +5,35 @@ const worksSection = document.querySelector("#works");
 const worksGrid = worksSection.querySelector(".works-grid");
 const worksNumber = worksSection.querySelector(".section-title span");
 const worksTitle = worksSection.querySelector(".section-title h2");
+const worksDescription = worksSection.querySelector(".works-description");
 const toast = document.querySelector(".toast");
+const siteFooter = document.querySelector(".site-footer");
 const featureCards = document.querySelectorAll("[data-feature-project]");
 const pageMeta = {
-  all: { number: "01", title: "All portfolio" },
-  professional: { number: "03", title: "Professional" },
-  personal: { number: "04", title: "Personal" },
+  all: {
+    number: "01",
+    title: "All portfolio",
+    description: [
+      "모든 포트폴리오의 작업이 랜덤하게 배치되며, 새로고침 시 순서가 변경됩니다.",
+      "Projects are displayed in a randomized order and will reshuffle upon refresh.",
+    ],
+  },
+  professional: {
+    number: "03",
+    title: "Professional",
+    description: [
+      "공개 되지 않은 프로젝트는 기밀 유지를 위하여 블러 처리하였습니다.",
+      "Selected projects have been blurred due to confidentiality agreements.",
+    ],
+  },
+  personal: {
+    number: "04",
+    title: "Personal",
+    description: [
+      "프롭 제작 작업을 중심으로 구성한 개인 프로젝트입니다.",
+      "This portfolio primarily features personal prop art projects.",
+    ],
+  },
 };
 
 const portfolioProjects = [
@@ -139,13 +162,13 @@ modal.innerHTML = `
       <p class="project-modal__description">작품설명</p>
       <div class="project-modal__specs"></div>
       <div class="project-modal__thumbs" aria-label="Project thumbnails"></div>
-      <p class="project-modal__hint">
-        <span>Scroll</span> / <span>↑</span><span>↓</span> images<br />
-        <span>←</span><span>→</span> projects<br />
-        <span>ESC</span> close
-      </p>
+      <div class="project-modal__hint">
+        <div class="project-modal__hint-line"><span>Scroll</span> / <span>↑</span><span>↓</span> Images</div>
+        <div class="project-modal__hint-line"><span>←</span><span>→</span> Projects</div>
+        <div class="project-modal__hint-line"><span>ESC</span> Close</div>
+      </div>
       <div class="project-modal__project-nav">
-        <button class="project-modal__project-prev" type="button">← Previous Project</button>
+        <button class="project-modal__project-prev" type="button">← Previous project</button>
         <button class="project-modal__project-next" type="button">Next project →</button>
       </div>
     </aside>
@@ -367,14 +390,17 @@ function setFilter(filter) {
     worksGrid.innerHTML = "";
     aboutSection.classList.remove("is-hidden");
     worksSection.classList.add("is-hidden");
+    siteFooter.classList.add("is-hidden");
     aboutSection.scrollIntoView({ behavior: "smooth", block: "start" });
     return;
   }
 
   aboutSection.classList.add("is-hidden");
   worksSection.classList.remove("is-hidden");
+  siteFooter.classList.remove("is-hidden");
   worksNumber.textContent = pageMeta[filter].number;
   worksTitle.textContent = pageMeta[filter].title;
+  worksDescription.innerHTML = pageMeta[filter].description.join("<br>");
 
   if (filter === "all") {
     renderGallery();
