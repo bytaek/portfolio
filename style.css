@@ -50,7 +50,8 @@ a {
   grid-template-rows: auto auto 1fr;
   gap: 14px;
 
-  max-width: 2000px;
+  width: 95%;
+  max-width: 1900px;
   margin: 0 auto;
   
   padding: 10px 20px 0;
