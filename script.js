@@ -158,7 +158,6 @@ modal.innerHTML = `
       <p class="project-modal__category"></p>
       <h3></h3>
       <p class="project-modal__date"></p>
-      <p class="project-modal__description">작품설명</p>
       <div class="project-modal__specs"></div>
       <div class="project-modal__thumbs" aria-label="Project thumbnails"></div>
       <div class="project-modal__hint">
