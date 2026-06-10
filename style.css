@@ -172,7 +172,8 @@ a {
 
 .category-button.is-active,
 .category-button:hover {
-  background: #ff0000 !important;
+  background-color: #457aff;
+  background-image: none;
   outline: 0;
 }
 
