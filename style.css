@@ -172,7 +172,7 @@ a {
 
 .category-button.is-active,
 .category-button:hover {
-  background: var(--point);
+  background: #ff0000 !important;
   outline: 0;
 }
 
