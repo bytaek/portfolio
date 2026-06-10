@@ -49,6 +49,10 @@ a {
   display: grid;
   grid-template-rows: auto auto 1fr;
   gap: 14px;
+
+  max-width: 1700px;
+  margin: 0 auto;
+  
   padding: 10px 20px 0;
 }
 
